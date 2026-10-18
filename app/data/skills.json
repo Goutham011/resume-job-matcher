@@ -1,0 +1,222 @@
+{
+  "skills": {
+    "financial modeling": {
+      "display": "Financial Modeling",
+      "aliases": ["financial models", "financial modelling"]
+    },
+    "forecasting": {
+      "display": "Forecasting"
+    },
+    "budgeting": {
+      "display": "Budgeting"
+    },
+    "variance analysis": {
+      "display": "Variance Analysis"
+    },
+    "gaap": {
+      "display": "GAAP"
+    },
+    "ifrs": {
+      "display": "IFRS"
+    },
+    "accounts payable": {
+      "display": "Accounts Payable"
+    },
+    "accounts receivable": {
+      "display": "Accounts Receivable"
+    },
+    "reconciliation": {
+      "display": "Reconciliation",
+      "aliases": ["reconciliations"]
+    },
+    "p&l": {
+      "display": "P&L",
+      "aliases": ["profit and loss", "profit & loss"]
+    },
+    "quickbooks": {
+      "display": "QuickBooks"
+    },
+    "financial reporting": {
+      "display": "Financial Reporting"
+    },
+    "payroll": {
+      "display": "Payroll"
+    },
+    "bookkeeping": {
+      "display": "Bookkeeping"
+    },
+    "hipaa": {
+      "display": "HIPAA"
+    },
+    "ehr": {
+      "display": "EHR"
+    },
+    "emr": {
+      "display": "EMR"
+    },
+    "icd-10": {
+      "display": "ICD-10"
+    },
+    "cpt": {
+      "display": "CPT",
+      "aliases": ["cpt coding"]
+    },
+    "medical billing": {
+      "display": "Medical Billing"
+    },
+    "patient scheduling": {
+      "display": "Patient Scheduling"
+    },
+    "clinical documentation": {
+      "display": "Clinical Documentation"
+    },
+    "cpr": {
+      "display": "CPR"
+    },
+    "contract review": {
+      "display": "Contract Review"
+    },
+    "contract management": {
+      "display": "Contract Management"
+    },
+    "legal research": {
+      "display": "Legal Research"
+    },
+    "litigation support": {
+      "display": "Litigation Support"
+    },
+    "ediscovery": {
+      "display": "eDiscovery",
+      "aliases": ["e-discovery"]
+    },
+    "compliance": {
+      "display": "Compliance"
+    },
+    "photoshop": {
+      "display": "Adobe Photoshop",
+      "aliases": ["adobe photoshop"]
+    },
+    "illustrator": {
+      "display": "Adobe Illustrator",
+      "aliases": ["adobe illustrator"]
+    },
+    "indesign": {
+      "display": "Adobe InDesign",
+      "aliases": ["adobe indesign"]
+    },
+    "wireframing": {
+      "display": "Wireframing"
+    },
+    "prototyping": {
+      "display": "Prototyping"
+    },
+    "ui design": {
+      "display": "UI Design"
+    },
+    "user research": {
+      "display": "User Research",
+      "aliases": ["ux research"]
+    },
+    "roadmap": {
+      "display": "Roadmapping"
+    },
+    "user stories": {
+      "display": "User Stories"
+    },
+    "scrum": {
+      "display": "Scrum"
+    },
+    "sprint planning": {
+      "display": "Sprint Planning"
+    },
+    "a/b testing": {
+      "display": "A/B Testing",
+      "aliases": ["ab testing", "a b testing"]
+    },
+    "okrs": {
+      "display": "OKRs",
+      "aliases": ["okr"]
+    },
+    "inventory management": {
+      "display": "Inventory Management"
+    },
+    "logistics": {
+      "display": "Logistics"
+    },
+    "supply chain": {
+      "display": "Supply Chain",
+      "aliases": ["supply chain management"]
+    },
+    "vendor management": {
+      "display": "Vendor Management"
+    },
+    "procurement": {
+      "display": "Procurement"
+    },
+    "order processing": {
+      "display": "Order Processing"
+    },
+    "zendesk": {
+      "display": "Zendesk"
+    },
+    "sharepoint": {
+      "display": "SharePoint"
+    },
+    "data entry": {
+      "display": "Data Entry"
+    },
+    "records management": {
+      "display": "Records Management"
+    },
+    "devops": {
+      "display": "DevOps"
+    },
+    "ci/cd": {
+      "display": "CI/CD",
+      "aliases": ["ci cd", "continuous integration"]
+    },
+    "terraform": {
+      "display": "Terraform"
+    },
+    "etl": {
+      "display": "ETL"
+    },
+    "spark": {
+      "display": "Apache Spark",
+      "aliases": ["apache spark"]
+    },
+    "hadoop": {
+      "display": "Hadoop"
+    },
+    "elasticsearch": {
+      "display": "Elasticsearch",
+      "aliases": ["elastic search"]
+    },
+    "kafka": {
+      "display": "Kafka",
+      "aliases": ["apache kafka"]
+    },
+    "hvac": {
+      "display": "HVAC"
+    },
+    "osha": {
+      "display": "OSHA"
+    },
+    "blueprint reading": {
+      "display": "Blueprint Reading"
+    },
+    "preventive maintenance": {
+      "display": "Preventive Maintenance"
+    },
+    "autocad": {
+      "display": "AutoCAD",
+      "aliases": ["cad"]
+    },
+    "welding": {
+      "display": "Welding"
+    },
+    "forklift": {
+      "display": "Forklift"
+    }
+  }
+}

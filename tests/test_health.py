@@ -8,4 +8,5 @@ client = TestClient(app)
 def test_root():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Resume Job Matcher API is running"}
+    assert "text/html" in response.headers["content-type"]
+    assert "Resume Job Matcher" in response.text
