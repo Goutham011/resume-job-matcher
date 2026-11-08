@@ -1,16 +1,60 @@
-# Resume Job Matcher & ATS Auditor
+<div align="center">
+  <img src=".github/assets/project-banner.svg" alt="Resume Job Matcher — semantic resume matching and ATS auditing" width="100%" />
+</div>
 
-> Built and maintained by **Goutham sai Goparaju** — gouthamsaigoparaju@gmail.com
-> GitHub: https://github.com/Goutham011
+<div align="center">
 
-A FastAPI service that scores how well a resume matches a job description and
-audits the resume the way applicant-tracking systems (ATS) read it.
+**Understand how a resume maps to a role—and how an ATS may read it.**
 
-It combines keyword skill matching, chunked semantic similarity with pinned
-transformer embeddings, writing/structure review, ATS parseability auditing,
-and a one-click DOCX "tailoring" export — plus a small static web UI.
+![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-test%20suite-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+[![CI](https://github.com/Goutham011/resume-job-matcher/actions/workflows/ci.yml/badge.svg)](https://github.com/Goutham011/resume-job-matcher/actions/workflows/ci.yml)
 
----
+[Why this project](#why-this-project) · [Architecture](#architecture) · [Features](#features) · [Quick start](#installation) · [API](#api-reference) · [Testing](#running-tests) · [Limits](#limitations)
+
+</div>
+
+> **A keyword count alone cannot explain whether a resume fits a role.**
+>
+> This FastAPI project combines skill coverage, chunked semantic similarity, writing review, ATS parseability checks, and a DOCX tailoring export. It is designed to surface useful evidence and gaps—not to make hiring decisions.
+
+## Why this project?
+
+| Principle | What it means |
+| :--- | :--- |
+| **Show the evidence** | The score is broken into semantic similarity and skill coverage, with matched skills, gaps, requirements, and review findings. |
+| **Read documents as documents** | PDF and DOCX input is checked for extraction quality, columns, tables, headings, dates, and contact details—not just plain text. |
+| **Keep the pipeline bounded** | Upload caps, archive checks, request limits, rate limits, and bounded heavy-work concurrency protect the API from oversized or excessive requests. |
+| **Keep results ephemeral** | Resume text, uploads, and results are processed in memory and are not stored by the service. |
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Client["Browser / API client"] --> API["FastAPI endpoints"]
+    API --> Parse["PDF / DOCX parsing"]
+    API --> Match["Matching pipeline"]
+    Parse --> Audit["ATS parseability audit"]
+    Match --> Embed["Chunked embeddings"]
+    Match --> Skills["Skill coverage and requirements"]
+    Match --> Review["Writing review and copy checks"]
+    Audit --> Result["Structured response"]
+    Embed --> Result
+    Skills --> Result
+    Review --> Result
+    API --> Export["Optional tailored DOCX"]
+```
+
+## Engineering highlights
+
+| Area | Implementation |
+| :--- | :--- |
+| **Long-document matching** | Token-aware chunks preserve long resumes and job descriptions; pooled, normalized embeddings provide semantic similarity. |
+| **Skill interpretation** | Aliases, dynamic job keywords, context-sensitive terms, and separately weighted soft skills make coverage more informative than raw substring matching. |
+| **Document safety** | PDF/DOCX type checks, 5 MB upload cap, PDF page cap, DOCX archive limits, and body-size limits reject unsafe or unreadable inputs. |
+| **Service behavior** | Request IDs, structured error responses, rate limiting, readiness/liveness endpoints, and a bounded heavy-work queue make failures observable and controlled. |
+| **Reproducibility** | A pinned embedding model revision keeps semantic scoring consistent across runs; deterministic fake-model tests run without downloading the model. |
 
 ## Features
 
